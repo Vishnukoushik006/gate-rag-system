@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# AI tools
+.qodo/
+
+# Node
+node_modules/
+
+# Environment
+.env
+
+# Large PDFs
+Data/papers/

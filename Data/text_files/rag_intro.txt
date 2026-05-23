@@ -1,0 +1,160 @@
+LangChain for RAG (Retrieval-Augmented Generation)
+--------------------------------------------------
+
+What is LangChain?
+LangChain is a framework used to build applications powered by Large Language Models (LLMs). It helps connect models with external data sources, APIs, vector databases, and custom workflows.
+
+Why LangChain for RAG?
+RAG allows an AI model to answer questions using external documents instead of relying only on pre-trained knowledge.
+
+RAG Pipeline:
+1. Load documents
+2. Split text into chunks
+3. Create embeddings
+4. Store embeddings in vector database
+5. Retrieve relevant chunks
+6. Send retrieved context to LLM
+7. Generate final answer
+
+Core Components in LangChain
+----------------------------
+
+1. Document Loaders
+Used to load PDFs, text files, websites, CSV files, etc.
+
+Example:
+from langchain_community.document_loaders import PyPDFLoader
+
+2. Text Splitters
+Break large text into smaller chunks.
+
+Example:
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+3. Embeddings
+Convert text into vectors (numerical representation).
+
+Example:
+from langchain_openai import OpenAIEmbeddings
+
+4. Vector Databases
+Store embeddings for similarity search.
+
+Popular Options:
+- FAISS
+- ChromaDB
+- Pinecone
+
+5. Retriever
+Finds relevant chunks related to user query.
+
+Example:
+retriever = db.as_retriever()
+
+6. LLM
+The language model that generates final response.
+
+Example:
+from langchain_openai import ChatOpenAI
+
+Modern LangChain Imports
+------------------------
+
+Old Import:
+from langchain.schema import Document
+
+New Import:
+from langchain_core.documents import Document
+
+Old Import:
+from langchain.vectorstores import FAISS
+
+New Import:
+from langchain_community.vectorstores import FAISS
+
+Recommended Installations
+-------------------------
+
+pip install langchain
+pip install langchain-community
+pip install langchain-core
+pip install langchain-openai
+pip install faiss-cpu
+
+Simple RAG Flow
+---------------
+
+PDF
+ ↓
+Text Extraction
+ ↓
+Chunking
+ ↓
+Embeddings
+ ↓
+Vector Database
+ ↓
+Retriever
+ ↓
+Relevant Context
+ ↓
+LLM
+ ↓
+Answer
+
+Best Beginner Project
+---------------------
+
+Upload PDF → Ask Questions
+
+This project teaches:
+- document loading
+- chunking
+- embeddings
+- vector databases
+- retrieval
+- prompting
+
+Important Concepts
+------------------
+
+Chunk Size:
+Controls how much text goes into one chunk.
+
+Chunk Overlap:
+Prevents context loss between chunks.
+
+Embeddings:
+Vectors representing meaning of text.
+
+Retriever:
+Searches vector database for similar content.
+
+Vector Similarity:
+Measures closeness between vectors.
+
+Recommended Learning Order
+---------------------------
+
+1. Python Basics
+2. APIs
+3. Embeddings
+4. Vector Databases
+5. LangChain
+6. FastAPI
+7. Streamlit
+8. Deployment
+
+Useful Resources
+----------------
+
+LangChain Docs:
+https://python.langchain.com/docs/introduction/
+
+FAISS GitHub:
+https://github.com/facebookresearch/faiss
+
+Free Learning Channels:
+- freeCodeCamp
+- Krish Naik
+- Codebasics
